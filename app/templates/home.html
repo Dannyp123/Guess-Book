@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% block body %}
+<a href="{% url 'leaving-note' %}"><button type="submit" class="btn btn-primary">Leave a note</button></a>
+<div class="">
+    {% for guest in guests %}
+    <h2>{{ guest.name }}</h2>
+    <p>{{ guest.date }}</p>
+    <p>{{ guest.message }}</p>
+    <hr>
+    {%endfor%}
+</div>
+
+{% endblock body %}
